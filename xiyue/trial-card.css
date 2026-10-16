@@ -1,0 +1,41 @@
+.trial-card {
+  --trial-surface: var(--surface, var(--ss-ref-surface, var(--vp-c-bg-elv)));
+  --trial-ink: var(--ink, var(--ss-ref-ink, var(--vp-c-text-1)));
+  --trial-muted: var(--muted, var(--ss-ref-slate, var(--vp-c-text-2)));
+  --trial-line: var(--line, var(--ss-ref-border, var(--vp-c-divider)));
+  --trial-accent: var(--accent, var(--vp-c-brand-1));
+  --trial-wash: var(--wash, var(--vp-c-bg-soft));
+  box-sizing: border-box; width: 100%; min-width: 0; max-width: 720px;
+  margin: 32px auto; padding: 24px; border: 1px solid var(--trial-line);
+  border-radius: 8px; background: var(--trial-surface); color: var(--trial-ink);
+  font-size: 15px; line-height: 1.65; letter-spacing: 0; overflow-wrap: anywhere;
+  scroll-margin-top: 100px;
+}
+.trial-card [hidden] { display: none !important; }
+.trial-card .trial-eyebrow { margin: 0 0 4px; color: var(--trial-accent); font-size: 13px; font-weight: 600; }
+.trial-card h2 { margin: 0 0 12px; padding: 0; border: 0; font-size: 24px; line-height: 1.4; letter-spacing: 0; }
+.trial-card p { margin: 12px 0; }
+.trial-card .trial-summary, .trial-card .trial-expiry { color: var(--trial-muted); }
+.trial-card .trial-countdown { font: 15px/1.65 ui-monospace, SFMono-Regular, Menlo, monospace; font-variant-numeric: tabular-nums; }
+.trial-card[data-state="expired"] .trial-code { color: var(--trial-muted); opacity: .6; }
+.trial-card .trial-status { min-height: 1.65em; }
+.trial-card .trial-code-row { display: flex; align-items: center; gap: 12px; min-width: 0; padding: 12px; background: var(--trial-wash); border-radius: 4px; }
+.trial-card .trial-code { flex: 1; min-width: 0; padding: 0; background: transparent; color: var(--trial-ink); font: 15px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; word-break: normal; overflow-wrap: anywhere; white-space: normal; user-select: all; }
+.trial-card button { box-sizing: border-box; max-width: 100%; min-height: 44px; padding: 9px 16px; border: 1px solid var(--trial-accent); border-radius: 4px; font: inherit; font-weight: 600; line-height: 1.5; letter-spacing: 0; cursor: pointer; }
+.trial-card .trial-copy { flex: 0 0 auto; color: var(--trial-accent); background: var(--trial-surface); }
+.trial-card .trial-claim { color: var(--trial-surface); background: var(--trial-accent); }
+.trial-card button:disabled { cursor: default; opacity: .65; }
+.trial-card[aria-busy="true"] .trial-claim { cursor: wait; }
+.trial-card button:focus-visible, .trial-card code:focus-visible { outline: 2px solid var(--trial-accent); outline-offset: 3px; }
+.trial-card .trial-steps { margin: 16px 0 0; padding-left: 22px; color: var(--trial-muted); }
+.trial-card .trial-steps li { margin-top: 6px; }
+.trial-card[data-state="error"] .trial-status, .trial-card[data-state="expired"] .trial-status { font-weight: 600; }
+.ss-ref-page .trial-card { width: calc(100% - 48px); }
+/* Download checksums on this installation page must also fit narrow screens. */
+.ss-ref-page:has(.trial-card) .ss-info-card { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 480px) {
+  .trial-card { padding: 18px; margin: 24px auto; }
+  .trial-card .trial-code-row { flex-wrap: wrap; }
+  .trial-card .trial-code { flex-basis: 100%; }
+  .trial-card .trial-claim { width: 100%; }
+}
