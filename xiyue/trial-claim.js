@@ -28,7 +28,7 @@
     '<p class="trial-status" role="status" aria-live="polite"></p>' +
     '<div class="trial-result" hidden><div class="trial-code-row"><code class="trial-code" tabindex="0" aria-label="试用授权码"></code>' +
     '<button type="button" class="trial-copy">复制</button></div><p class="trial-countdown"></p><p class="trial-expiry"></p>' +
-    '<ol class="trial-steps"><li>打开汐月，首次显示授权页；也可从「设置 → 应用授权」（通用分组）进入。</li><li>在「输入 XY 授权码」中粘贴试用码，点击右侧勾选按钮确认激活。</li><li>激活成功后，汐月 3 天试用立即开始。</li></ol></div>' +
+    '<ol class="trial-steps"><li>打开汐月，没有可用授权时会先显示授权页；也可从「设置 → 应用授权」（通用分组）进入。</li><li>在「输入 XY 授权码」中粘贴试用码，点击右侧勾选按钮确认激活。</li><li>激活成功后，汐月 3 天试用立即开始。</li></ol></div>' +
     '<button type="button" class="trial-claim">生成汐月试用码</button><noscript>请启用 JavaScript 后生成汐月试用码。</noscript>';
   anchor.insertAdjacentElement('afterend', card);
   const status = card.querySelector('.trial-status');
