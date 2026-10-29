@@ -126,6 +126,11 @@ a:hover .chev { transform: translateX(3px); }
 .site-footer { margin: 88px auto 0; max-width: 1280px; border-top: 1px solid var(--line); padding: 40px 40px 34px; display: flex; align-items: center; gap: 32px; color: var(--muted); font-size: 12px; }
 .site-footer > div { margin-left: auto; display: flex; flex-wrap: wrap; gap: 8px 24px; }
 .site-footer > div > span { white-space: nowrap; }
+footer.site-footer { flex-wrap: wrap; }
+.friend-links { flex: 0 0 100%; display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 24px; }
+.friend-links a { color: var(--ink); }
+.friend-links a:hover { color: var(--accent); }
+.friend-links small { color: var(--muted); font-size: 1em; }
 .doc-layout { max-width: 1360px; margin: 0 auto; display: grid; grid-template-columns: 206px minmax(0, 720px) 156px; gap: 52px; padding: 0 40px; }
 .doc-sidebar { position: sticky; top: 72px; align-self: start; height: calc(100dvh - 72px); overflow-y: auto; padding: 34px 0 40px; scrollbar-width: thin; }
 .nav-group { margin-bottom: 25px; }
